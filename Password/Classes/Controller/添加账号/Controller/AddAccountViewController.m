@@ -123,5 +123,9 @@
     [self.view addSubview:view];
 }
 
+-(void)ImageViewReloadData:(NSMutableArray *)imgMarray
+{
+    
+}
 
 @end

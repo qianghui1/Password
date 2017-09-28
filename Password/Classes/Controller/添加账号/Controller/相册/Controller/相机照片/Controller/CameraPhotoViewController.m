@@ -5,10 +5,11 @@
 //  Created by 詹强辉 on 2017/7/24.
 //  Copyright © 2017年 詹强辉. All rights reserved.
 //
-
+#define ScreenW [UIScreen mainScreen].bounds.size.width
+#define ScreenH  [UIScreen mainScreen].bounds.size.height
 #import "CameraPhotoViewController.h"
 #import "CameraPhotoCollectionViewCell.h"
-//#import "PhotoWallViewController.h"
+#import "AddAccountViewController.h"
 
 @interface CameraPhotoViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,CameraPhotoDelegate>
 /*!
@@ -156,6 +157,23 @@
 //    }
     
 #warning 将照片传到上个页面中
+    AddAccountViewController *viewCtl = (AddAccountViewController *)self.navigationController.viewControllers[1];
+    //    [viewCtl ImageViewReloadData:_cameraPhotoMArray];
+    
+    for (int  i =0; i<_cameraPhotoMArray.count; i++)
+    {
+        UIView *v = [[UIView alloc]initWithFrame:CGRectMake(i*ScreenW/3, 0, ScreenW/3, ScreenH/4)];
+        ALAsset *assert = _cameraPhotoMArray[i];
+        UIImage *image = [UIImage imageWithCGImage:[assert thumbnail]];
+        UIImageView *imgV = [[UIImageView alloc]initWithImage:image];
+        imgV.frame = CGRectMake(10,15,v.frame.size.width-20, v.frame.size.height-30);
+        //        imgV.center = CGPointMake(v.center.x, v.center.y);
+        [v addSubview:imgV];
+        [viewCtl.imgScrollView addSubview:v];
+    }
+    
+    [self.navigationController popToViewController:viewCtl animated:YES];
+    
     
 //    PhotoWallViewController *viewCtl = (PhotoWallViewController *)self.navigationController.viewControllers[2];
 //    [viewCtl ReloadData];
