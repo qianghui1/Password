@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B4077D2D1F77F17F00CF3677 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4077D2A1F77F14500CF3677 /* ViewController.m */; };
+		B4077D301F77F1DD00CF3677 /* ViewControllerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4077D2F1F77F1DD00CF3677 /* ViewControllerTableViewCell.m */; };
+		B4077D3E1F780E9B00CF3677 /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4077D3D1F780E9B00CF3677 /* AccountViewController.m */; };
+		B4141AD61F7BD750005C80AC /* AddAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4141AD41F7BD740005C80AC /* AddAccountViewController.m */; };
+		B4141AE41F7BE367005C80AC /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4141ADB1F7BE343005C80AC /* PhotoViewController.m */; };
+		B4141AE71F7BE37D005C80AC /* CameraPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4141ADE1F7BE343005C80AC /* CameraPhotoViewController.m */; };
+		B4141AE81F7BE38F005C80AC /* CameraPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4141AE11F7BE343005C80AC /* CameraPhotoCollectionViewCell.m */; };
 		B42A67231F77E1E4009CD08C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B42A67221F77E1E4009CD08C /* AppDelegate.m */; };
-		B42A67261F77E1E4009CD08C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B42A67251F77E1E4009CD08C /* ViewController.m */; };
 		B42A67291F77E1E4009CD08C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B42A67271F77E1E4009CD08C /* Main.storyboard */; };
 		B42A672B1F77E1E4009CD08C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B42A672A1F77E1E4009CD08C /* Assets.xcassets */; };
 		B42A672E1F77E1E4009CD08C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B42A672C1F77E1E4009CD08C /* LaunchScreen.storyboard */; };
@@ -35,11 +41,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B4077D2A1F77F14500CF3677 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B4077D2B1F77F14500CF3677 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B4077D2E1F77F1DD00CF3677 /* ViewControllerTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewControllerTableViewCell.h; sourceTree = "<group>"; };
+		B4077D2F1F77F1DD00CF3677 /* ViewControllerTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewControllerTableViewCell.m; sourceTree = "<group>"; };
+		B4077D3C1F780E9B00CF3677 /* AccountViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
+		B4077D3D1F780E9B00CF3677 /* AccountViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccountViewController.m; sourceTree = "<group>"; };
+		B4141AD31F7BD740005C80AC /* AddAccountViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddAccountViewController.h; sourceTree = "<group>"; };
+		B4141AD41F7BD740005C80AC /* AddAccountViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddAccountViewController.m; sourceTree = "<group>"; };
+		B4141ADA1F7BE343005C80AC /* PhotoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
+		B4141ADB1F7BE343005C80AC /* PhotoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
+		B4141ADE1F7BE343005C80AC /* CameraPhotoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraPhotoViewController.m; sourceTree = "<group>"; };
+		B4141ADF1F7BE343005C80AC /* CameraPhotoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraPhotoViewController.h; sourceTree = "<group>"; };
+		B4141AE11F7BE343005C80AC /* CameraPhotoCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraPhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		B4141AE21F7BE343005C80AC /* CameraPhotoCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraPhotoCollectionViewCell.h; sourceTree = "<group>"; };
 		B42A671E1F77E1E4009CD08C /* Password.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Password.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B42A67211F77E1E4009CD08C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B42A67221F77E1E4009CD08C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B42A67241F77E1E4009CD08C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B42A67251F77E1E4009CD08C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B42A67281F77E1E4009CD08C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B42A672A1F77E1E4009CD08C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B42A672D1F77E1E4009CD08C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -78,6 +96,139 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B4077D211F77F0BF00CF3677 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B4077D221F77F0BF00CF3677 /* Controller */,
+				B4077D251F77F0BF00CF3677 /* View */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		B4077D221F77F0BF00CF3677 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B4077D2B1F77F14500CF3677 /* ViewController.h */,
+				B4077D2A1F77F14500CF3677 /* ViewController.m */,
+				B4141AD11F7BD740005C80AC /* 添加账号 */,
+				B4077D371F780E8500CF3677 /* 账号 */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B4077D251F77F0BF00CF3677 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B4077D2E1F77F1DD00CF3677 /* ViewControllerTableViewCell.h */,
+				B4077D2F1F77F1DD00CF3677 /* ViewControllerTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B4077D371F780E8500CF3677 /* 账号 */ = {
+			isa = PBXGroup;
+			children = (
+				B4077D381F780E8500CF3677 /* Controller */,
+				B4077D3B1F780E8500CF3677 /* View */,
+			);
+			path = "账号";
+			sourceTree = "<group>";
+		};
+		B4077D381F780E8500CF3677 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B4077D3C1F780E9B00CF3677 /* AccountViewController.h */,
+				B4077D3D1F780E9B00CF3677 /* AccountViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B4077D3B1F780E8500CF3677 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B4141AD11F7BD740005C80AC /* 添加账号 */ = {
+			isa = PBXGroup;
+			children = (
+				B4141AD21F7BD740005C80AC /* Controller */,
+				B4141AD51F7BD740005C80AC /* View */,
+			);
+			path = "添加账号";
+			sourceTree = "<group>";
+		};
+		B4141AD21F7BD740005C80AC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B4141AD31F7BD740005C80AC /* AddAccountViewController.h */,
+				B4141AD41F7BD740005C80AC /* AddAccountViewController.m */,
+				B4141AD81F7BE343005C80AC /* 相册 */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B4141AD51F7BD740005C80AC /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B4141AD81F7BE343005C80AC /* 相册 */ = {
+			isa = PBXGroup;
+			children = (
+				B4141AD91F7BE343005C80AC /* Controller */,
+				B4141AE31F7BE343005C80AC /* View */,
+			);
+			path = "相册";
+			sourceTree = "<group>";
+		};
+		B4141AD91F7BE343005C80AC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B4141ADA1F7BE343005C80AC /* PhotoViewController.h */,
+				B4141ADB1F7BE343005C80AC /* PhotoViewController.m */,
+				B4141ADC1F7BE343005C80AC /* 相机照片 */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B4141ADC1F7BE343005C80AC /* 相机照片 */ = {
+			isa = PBXGroup;
+			children = (
+				B4141ADD1F7BE343005C80AC /* Controller */,
+				B4141AE01F7BE343005C80AC /* View */,
+			);
+			path = "相机照片";
+			sourceTree = "<group>";
+		};
+		B4141ADD1F7BE343005C80AC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B4141ADF1F7BE343005C80AC /* CameraPhotoViewController.h */,
+				B4141ADE1F7BE343005C80AC /* CameraPhotoViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B4141AE01F7BE343005C80AC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B4141AE11F7BE343005C80AC /* CameraPhotoCollectionViewCell.m */,
+				B4141AE21F7BE343005C80AC /* CameraPhotoCollectionViewCell.h */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B4141AE31F7BE343005C80AC /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		B42A67151F77E1E4009CD08C = {
 			isa = PBXGroup;
 			children = (
@@ -103,8 +254,7 @@
 			children = (
 				B42A67211F77E1E4009CD08C /* AppDelegate.h */,
 				B42A67221F77E1E4009CD08C /* AppDelegate.m */,
-				B42A67241F77E1E4009CD08C /* ViewController.h */,
-				B42A67251F77E1E4009CD08C /* ViewController.m */,
+				B4077D211F77F0BF00CF3677 /* Classes */,
 				B42A67271F77E1E4009CD08C /* Main.storyboard */,
 				B42A672A1F77E1E4009CD08C /* Assets.xcassets */,
 				B42A672C1F77E1E4009CD08C /* LaunchScreen.storyboard */,
@@ -265,9 +415,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B42A67261F77E1E4009CD08C /* ViewController.m in Sources */,
+				B4141AE81F7BE38F005C80AC /* CameraPhotoCollectionViewCell.m in Sources */,
+				B4141AE71F7BE37D005C80AC /* CameraPhotoViewController.m in Sources */,
+				B4141AE41F7BE367005C80AC /* PhotoViewController.m in Sources */,
+				B4141AD61F7BD750005C80AC /* AddAccountViewController.m in Sources */,
+				B4077D2D1F77F17F00CF3677 /* ViewController.m in Sources */,
 				B42A67311F77E1E4009CD08C /* main.m in Sources */,
+				B4077D301F77F1DD00CF3677 /* ViewControllerTableViewCell.m in Sources */,
 				B42A67231F77E1E4009CD08C /* AppDelegate.m in Sources */,
+				B4077D3E1F780E9B00CF3677 /* AccountViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,7 +526,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -419,7 +575,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -433,6 +589,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KJUJHE82B8;
 				INFOPLIST_FILE = Password/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xianceduoxuan.Password;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -447,6 +604,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KJUJHE82B8;
 				INFOPLIST_FILE = Password/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xianceduoxuan.Password;
 				PRODUCT_NAME = "$(TARGET_NAME)";

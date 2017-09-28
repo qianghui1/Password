@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "ViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -15,8 +15,26 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+
+    ViewController *loginVC = [[ViewController alloc]init];
+    
+    UINavigationController *ngC = [[UINavigationController alloc]initWithRootViewController:loginVC];
+    
+    //设置导航栏背景图
+    [ngC.navigationBar setBackgroundImage:[UIImage imageNamed:@"导航栏.png"]  forBarMetrics:UIBarMetricsDefault];
+    
+    //修改导航栏的标题字体、颜色、大小
+    [ngC.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[UIFont fontWithName:@"HelveticaNeue-CondensedBlack" size:20.0f]}];
+    
+    ngC.navigationBar.tintColor = [UIColor whiteColor];
+    
+    self.window.rootViewController = ngC;
+    
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
