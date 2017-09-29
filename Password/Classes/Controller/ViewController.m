@@ -44,7 +44,7 @@
 -(void)SetUI
 {
     [self.navigationController.navigationBar setBarStyle:UIBarStyleBlack];      //改变属性栏颜色
-    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60) forBarMetrics:UIBarMetricsDefault]; //隐藏返回按钮文字
+//    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60) forBarMetrics:UIBarMetricsDefault]; //隐藏返回按钮文字
     self.view.backgroundColor = [UIColor whiteColor];           //背景色
     self.title = @"Passwords";
     

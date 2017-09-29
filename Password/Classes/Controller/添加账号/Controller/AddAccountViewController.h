@@ -13,5 +13,4 @@
 @property(nonatomic,copy)NSString *accountStr;
 @property(nonatomic,strong)UIScrollView *imgScrollView;
 
--(void)ImageViewReloadData:(NSMutableArray *)imgMarray;
 @end

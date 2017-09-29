@@ -68,7 +68,12 @@
     [self.view addSubview:accountView5];
     
     [self SetBoundaryView:CGRectMake(0, accountView5.frame.size.height+accountView5.frame.origin.y, ScreenW, 1)];       //分界线6
-    UIView *accountView6 = [[UIView alloc]initWithFrame:CGRectMake(0, accountView5.frame.size.height+accountView5.frame.origin.y+1, ScreenW, ScreenH/12)]; //相片
+    UIView *accountView6 = [[UIView alloc]initWithFrame:CGRectMake(0, accountView5.frame.size.height+accountView5.frame.origin.y+1, ScreenW, ScreenH/4)]; //相片
+    // 1.创建UIScrollView
+    self.imgScrollView = [[UIScrollView alloc] init];
+    self.imgScrollView.frame = CGRectMake(0, 0, accountView6.frame.size.width, accountView6.frame.size.height); // frame中的size指UIScrollView的可视范围
+    self.imgScrollView.backgroundColor = [UIColor whiteColor];
+    [accountView6 addSubview:self.imgScrollView];
     [self.view addSubview:accountView6];
     
 }
@@ -99,6 +104,7 @@
         {
             PhotoViewController *PhotoVC = [[PhotoViewController alloc]init];
             [self.navigationController pushViewController:PhotoVC animated:YES];
+
         }
         else
         {
@@ -121,11 +127,6 @@
     UIView *view = [[UIView alloc]initWithFrame:frame];
     view.backgroundColor = [UIColor colorWithRed:246.0/255.0 green:246.0/255.0 blue:246.0/255.0 alpha:1];
     [self.view addSubview:view];
-}
-
--(void)ImageViewReloadData:(NSMutableArray *)imgMarray
-{
-    
 }
 
 @end
