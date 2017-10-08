@@ -9,6 +9,7 @@
 #define ScreenH  [UIScreen mainScreen].bounds.size.height
 #import "AddAccountViewController.h"
 #import "PhotoViewController.h"
+#import "DataSource.h"
 
 @interface AddAccountViewController ()<UIActionSheetDelegate>
 
@@ -76,6 +77,9 @@
     [accountView6 addSubview:self.imgScrollView];
     [self.view addSubview:accountView6];
     
+    DataSource *dataSource = [DataSource GetDataSource];
+    NSLog(@"---%ld---",dataSource.CameraPhotoMDic.count);
+    
 }
 
 -(UILabel *)SetAccountViewUILabel:(CGRect)frame TitleText:(NSString *)titleStr
@@ -104,7 +108,6 @@
         {
             PhotoViewController *PhotoVC = [[PhotoViewController alloc]init];
             [self.navigationController pushViewController:PhotoVC animated:YES];
-
         }
         else
         {

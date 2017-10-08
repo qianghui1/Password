@@ -38,70 +38,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Password/Classes/Controller/&#x6dfb;&#x52a0;&#x8d26;&#x53f7;/Controller/AddAccountViewController.m"
-            timestampString = "528393077.193895"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
-            landmarkName = "-CameraAction"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Password/Classes/Controller/&#x6dfb;&#x52a0;&#x8d26;&#x53f7;/Controller/AddAccountViewController.m"
-            timestampString = "528393077.193963"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
-            landmarkName = "-CameraAction"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__40-[AddAccountViewController CameraAction]_block_invoke_2"
-                  moduleName = "Password"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zhanqianghui/Desktop/Password/Password/Classes/Controller/%E6%B7%BB%E5%8A%A0%E8%B4%A6%E5%8F%B7/Controller/AddAccountViewController.m"
-                  timestampString = "528302023.678123"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "107"
-                  endingLineNumber = "107"
-                  offsetFromSymbolStart = "236">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__40-[AddAccountViewController CameraAction]_block_invoke_2"
-                  moduleName = "Password"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zhanqianghui/Desktop/Password/Password/Classes/Controller/%E6%B7%BB%E5%8A%A0%E8%B4%A6%E5%8F%B7/Controller/AddAccountViewController.m"
-                  timestampString = "528302023.679993"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "107"
-                  endingLineNumber = "107"
-                  offsetFromSymbolStart = "248">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -160,22 +96,6 @@
             startingLineNumber = "25"
             endingLineNumber = "25"
             landmarkName = "-groupImageView"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../TTChat/TTChat/Home/Controller/&#x52a8;&#x6001;/Conrtoller/&#x7167;&#x7247;&#x5899;/Controller/&#x76f8;&#x518c;/Controller/&#x76f8;&#x673a;&#x7167;&#x7247;/Controller/CameraPhotoViewController.m"
-            timestampString = "528393077.194102"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "142"
-            endingLineNumber = "142"
-            landmarkName = "-SetUserImageViewTap:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
