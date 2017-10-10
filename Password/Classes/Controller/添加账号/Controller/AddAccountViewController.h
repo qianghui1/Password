@@ -6,11 +6,10 @@
 //  Copyright © 2017年 詹强辉. All rights reserved.
 //
 
-#import "ViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface AddAccountViewController : ViewController
+@interface AddAccountViewController : UIViewController
 
 @property(nonatomic,copy)NSString *accountStr;
-@property(nonatomic,strong)UIScrollView *imgScrollView;
 
 @end

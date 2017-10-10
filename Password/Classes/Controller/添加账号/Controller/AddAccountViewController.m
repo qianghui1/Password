@@ -10,18 +10,36 @@
 #import "AddAccountViewController.h"
 #import "PhotoViewController.h"
 #import "DataSource.h"
+#import "MgCollectionViewCell.h"
+#import <AssetsLibrary/AssetsLibrary.h>
 
-@interface AddAccountViewController ()<UIActionSheetDelegate>
+@interface AddAccountViewController ()<UIActionSheetDelegate,UICollectionViewDataSource,UICollectionViewDelegate>
+
+@property(nonatomic,strong)UICollectionView *mgCollectionView;
 
 @end
 
 @implementation AddAccountViewController
 
-- (void)viewDidLoad {
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
+    NSLog(@"运行一次");
+    DataSource *dataSource = [DataSource GetDataSource];
+    if (dataSource.CameraPhotoMArray.count != 0)
+    {
+        if (self.mgCollectionView)
+        {
+            [self.mgCollectionView reloadData];
+        }
+    }
+}
+
+-(void)viewDidLoad
+{
     [super viewDidLoad];
-
+    
     [self SetUI];
-
 }
 
 -(void)SetUI
@@ -70,16 +88,16 @@
     
     [self SetBoundaryView:CGRectMake(0, accountView5.frame.size.height+accountView5.frame.origin.y, ScreenW, 1)];       //分界线6
     UIView *accountView6 = [[UIView alloc]initWithFrame:CGRectMake(0, accountView5.frame.size.height+accountView5.frame.origin.y+1, ScreenW, ScreenH/4)]; //相片
-    // 1.创建UIScrollView
-    self.imgScrollView = [[UIScrollView alloc] init];
-    self.imgScrollView.frame = CGRectMake(0, 0, accountView6.frame.size.width, accountView6.frame.size.height); // frame中的size指UIScrollView的可视范围
-    self.imgScrollView.backgroundColor = [UIColor whiteColor];
-    [accountView6 addSubview:self.imgScrollView];
+
+    UICollectionViewFlowLayout *lyout=[[UICollectionViewFlowLayout alloc]init];
+    self.mgCollectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, accountView6.frame.size.width, accountView6.frame.size.height) collectionViewLayout:lyout];
+    [self.mgCollectionView registerClass:[MgCollectionViewCell class]forCellWithReuseIdentifier:@"mgCollectionViewCell"];
+    self.mgCollectionView.backgroundColor = [UIColor clearColor];
+    self.mgCollectionView.dataSource = self;
+    self.mgCollectionView.delegate = self;
+    [accountView6 addSubview:self.mgCollectionView];
     [self.view addSubview:accountView6];
-    
-    DataSource *dataSource = [DataSource GetDataSource];
-    NSLog(@"---%ld---",dataSource.CameraPhotoMDic.count);
-    
+
 }
 
 -(UILabel *)SetAccountViewUILabel:(CGRect)frame TitleText:(NSString *)titleStr
@@ -94,7 +112,6 @@
 
 -(void)CameraAction
 {
-    NSLog(@"点击了相机__LINE:%d__",__LINE__);
     UIAlertController *alertview=[UIAlertController alertControllerWithTitle:@"提示" message:@"选择照片添加到备注中" preferredStyle:UIAlertControllerStyleActionSheet];
     // UIAlertControllerStyleActionSheet 是显示在屏幕底部
     // UIAlertControllerStyleAlert 是显示在中间
@@ -132,4 +149,31 @@
     [self.view addSubview:view];
 }
 
+#pragma mark - UICollectionViewDelegate
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    DataSource *dataSource = [DataSource GetDataSource];
+    return dataSource.CameraPhotoMArray.count;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    MgCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"mgCollectionViewCell" forIndexPath:indexPath];
+    DataSource *dataSource = [DataSource GetDataSource];
+    ALAsset *assert = dataSource.CameraPhotoMArray[indexPath.row];
+    [cell SetCell:[UIImage imageWithCGImage:[assert thumbnail]]];
+    return cell;
+}
+// 设置cell大小
+-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    return CGSizeMake(100,100);
+}
+
+// 设置cell边距
+-(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+{
+    //上 左 下 右
+    return UIEdgeInsetsMake(0, 0, 0 ,0);
+}
 @end

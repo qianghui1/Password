@@ -15,6 +15,10 @@
  */
 @property (nonatomic,strong) NSMutableDictionary *CameraPhotoMDic;
 
+/**
+ 已选择的图片数组
+ */
+@property (nonatomic,strong) NSMutableArray *CameraPhotoMArray;
 
 /**
  实例化对象

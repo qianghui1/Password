@@ -25,6 +25,7 @@ static DataSource *dataSource;
     if (self = [super init])
     {
         self.CameraPhotoMDic = [[NSMutableDictionary alloc]init];
+        self.CameraPhotoMArray = [[NSMutableArray alloc]init];
     }
     return self;
 }

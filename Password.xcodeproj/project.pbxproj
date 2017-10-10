@@ -23,6 +23,7 @@
 		B487946A1F7E7F2400A60780 /* CameraPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B48794631F7E7EF400A60780 /* CameraPhotoViewController.m */; };
 		B487946B1F7E7F2400A60780 /* CameraPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B48794661F7E7EF400A60780 /* CameraPhotoCollectionViewCell.m */; };
 		B487946E1F7E8BB200A60780 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B487946D1F7E8BB200A60780 /* Photos.framework */; };
+		B4F698491F8A2AE0002223DE /* MgCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F698481F8A2AE0002223DE /* MgCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,8 @@
 		B48794661F7E7EF400A60780 /* CameraPhotoCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraPhotoCollectionViewCell.m; sourceTree = "<group>"; };
 		B48794671F7E7EF400A60780 /* CameraPhotoCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraPhotoCollectionViewCell.h; sourceTree = "<group>"; };
 		B487946D1F7E8BB200A60780 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		B4F698471F8A2AE0002223DE /* MgCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MgCollectionViewCell.h; sourceTree = "<group>"; };
+		B4F698481F8A2AE0002223DE /* MgCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MgCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +182,8 @@
 		B4141AD51F7BD740005C80AC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B4F698471F8A2AE0002223DE /* MgCollectionViewCell.h */,
+				B4F698481F8A2AE0002223DE /* MgCollectionViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -457,6 +462,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4F698491F8A2AE0002223DE /* MgCollectionViewCell.m in Sources */,
 				B48794691F7E7F2400A60780 /* PhotoViewController.m in Sources */,
 				B487946A1F7E7F2400A60780 /* CameraPhotoViewController.m in Sources */,
 				B487946B1F7E7F2400A60780 /* CameraPhotoCollectionViewCell.m in Sources */,
