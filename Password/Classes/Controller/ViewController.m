@@ -24,12 +24,6 @@
 
 @implementation ViewController
 
-//-(void)viewDidDisappear:(BOOL)animated
-//{
-//    [super viewDidDisappear:YES];
-//    NSLog(@"2");
-//}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -290,22 +284,22 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-//    NSDictionary *accountDic = [[NSDictionary alloc]initWithDictionary:[defaults objectForKey:@"accountDic"]];
-//    NSArray *accountArray = [[NSArray alloc]initWithArray:accountDic[_accountArray[indexPath.row]]];
-//
-//    if (accountArray.count == 0)    //如果没有数据,进入创建页面
-//    {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSDictionary *accountDic = [[NSDictionary alloc]initWithDictionary:[defaults objectForKey:@"accountDic"]];
+    NSArray *accountArray = [[NSArray alloc]initWithArray:accountDic[_accountArray[indexPath.row]]];
+
+    if (accountArray.count == 0)    //如果没有数据,进入创建页面
+    {
         AddAccountViewController *addAccountVC = [[AddAccountViewController alloc]init];
         addAccountVC.accountStr = _accountArray[indexPath.row];
         [self.navigationController pushViewController:addAccountVC animated:YES];
-//    }
-//    else
-//    {
-//        AccountViewController *accountVC = [[AccountViewController alloc]init];
-//        accountVC.accountStr = _accountArray[indexPath.row];
-//        [self.navigationController pushViewController:accountVC animated:YES];
-//    }
+    }
+    else
+    {
+        AccountViewController *accountVC = [[AccountViewController alloc]init];
+        accountVC.accountStr = _accountArray[indexPath.row];
+        [self.navigationController pushViewController:accountVC animated:YES];
+    }
     
 }
 

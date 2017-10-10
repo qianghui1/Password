@@ -28,7 +28,7 @@
     DataSource *dataSource = [DataSource GetDataSource];
     if (dataSource.CameraPhotoMArray.count != 0)
     {
-        if (self.mgCollectionView)
+        if (self.mgCollectionView != nil)
         {
             [self.mgCollectionView reloadData];
         }
@@ -44,11 +44,12 @@
 
 -(void)SetUI
 {
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor colorWithRed:246.0/255.0 green:246.0/255.0 blue:246.0/255.0 alpha:1];;
     self.title = @"Add";
     
     [self SetBoundaryView:CGRectMake(0, 0, ScreenW, 20)];       //分界线1
     UIView *accountView1 = [[UIView alloc]initWithFrame:CGRectMake(0, 20, ScreenW, ScreenH/11)];        //图标和标题
+    accountView1.backgroundColor = [UIColor whiteColor];
     UIImageView *titleImgV = [[UIImageView alloc]initWithFrame:CGRectMake(15, 10, accountView1.frame.size.height-20, accountView1.frame.size.height-20)];
     titleImgV.image = [UIImage imageNamed:self.accountStr];
     [accountView1 addSubview:titleImgV];
@@ -58,6 +59,7 @@
     [self SetBoundaryView:CGRectMake(0, accountView1.frame.size.height+20, ScreenW, 20)];       //分界线2
     
     UIView *accountView2 = [[UIView alloc]initWithFrame:CGRectMake(0, accountView1.frame.size.height+40, ScreenW, ScreenH/12)]; //提示标题输入
+    accountView2.backgroundColor = [UIColor whiteColor];
     UITextField *titleTextF = [[UITextField alloc]initWithFrame:CGRectMake(25, 10, accountView2.frame.size.width-50, accountView2.frame.size.height-20)];
     titleTextF.placeholder = @"标题";
     [accountView2 addSubview:titleTextF];
@@ -65,18 +67,21 @@
     [self SetBoundaryView:CGRectMake(0, accountView2.frame.size.height+accountView2.frame.origin.y, ScreenW, 20)];       //分界线3
     
     UIView *accountView3 = [[UIView alloc]initWithFrame:CGRectMake(0, accountView2.frame.size.height+accountView2.frame.origin.y+20, ScreenW, ScreenH/12)]; //账号
+    accountView3.backgroundColor = [UIColor whiteColor];
     UILabel *accountLab = [self SetAccountViewUILabel:CGRectMake(30, 10, 35, titleImgV.frame.size.height) TitleText:@"账号"];
     [accountView3 addSubview:accountLab];
     [self.view addSubview:accountView3];
     [self SetBoundaryView:CGRectMake(0, accountView3.frame.size.height+accountView3.frame.origin.y, ScreenW, 1)];       //分界线4
     
     UIView *accountView4 = [[UIView alloc]initWithFrame:CGRectMake(0, accountView3.frame.size.height+accountView3.frame.origin.y+1, ScreenW, ScreenH/12)]; //密码
+    accountView4.backgroundColor = [UIColor whiteColor];
     UILabel *passwordLab = [self SetAccountViewUILabel:CGRectMake(30, 10, 35, titleImgV.frame.size.height) TitleText:@"密码"];
     [accountView4 addSubview:passwordLab];
     [self.view addSubview:accountView4];
     
     [self SetBoundaryView:CGRectMake(0, accountView4.frame.size.height+accountView4.frame.origin.y, ScreenW, 20)];       //分界线5
     UIView *accountView5 = [[UIView alloc]initWithFrame:CGRectMake(0, accountView4.frame.size.height+accountView4.frame.origin.y+20, ScreenW, ScreenH/12)]; //备注
+    accountView5.backgroundColor = [UIColor whiteColor];
     UILabel *noteLab = [self SetAccountViewUILabel:CGRectMake(30, 10, 35, accountView5.frame.size.height-20) TitleText:@"备注"];
     [accountView5 addSubview:noteLab];
     UIButton *cameraBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -87,12 +92,12 @@
     [self.view addSubview:accountView5];
     
     [self SetBoundaryView:CGRectMake(0, accountView5.frame.size.height+accountView5.frame.origin.y, ScreenW, 1)];       //分界线6
-    UIView *accountView6 = [[UIView alloc]initWithFrame:CGRectMake(0, accountView5.frame.size.height+accountView5.frame.origin.y+1, ScreenW, ScreenH/4)]; //相片
-
+    UIView *accountView6 = [[UIView alloc]initWithFrame:CGRectMake(0, accountView5.frame.size.height+accountView5.frame.origin.y+1, ScreenW, ScreenW/3)]; //相片
+    accountView6.backgroundColor = [UIColor whiteColor];
     UICollectionViewFlowLayout *lyout=[[UICollectionViewFlowLayout alloc]init];
-    self.mgCollectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, accountView6.frame.size.width, accountView6.frame.size.height) collectionViewLayout:lyout];
+    self.mgCollectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, (ScreenW/3-ScreenW/3.5)/2, accountView6.frame.size.width, accountView6.frame.size.height) collectionViewLayout:lyout];
     [self.mgCollectionView registerClass:[MgCollectionViewCell class]forCellWithReuseIdentifier:@"mgCollectionViewCell"];
-    self.mgCollectionView.backgroundColor = [UIColor clearColor];
+    self.mgCollectionView.backgroundColor = [UIColor whiteColor];
     self.mgCollectionView.dataSource = self;
     self.mgCollectionView.delegate = self;
     [accountView6 addSubview:self.mgCollectionView];
@@ -155,25 +160,23 @@
     DataSource *dataSource = [DataSource GetDataSource];
     return dataSource.CameraPhotoMArray.count;
 }
-
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     MgCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"mgCollectionViewCell" forIndexPath:indexPath];
     DataSource *dataSource = [DataSource GetDataSource];
-    ALAsset *assert = dataSource.CameraPhotoMArray[indexPath.row];
-    [cell SetCell:[UIImage imageWithCGImage:[assert thumbnail]]];
+    [cell SetCell:dataSource.CameraPhotoMArray[indexPath.row][0]];
     return cell;
 }
 // 设置cell大小
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(100,100);
+    return CGSizeMake(collectionView.frame.size.width/3.5,collectionView.frame.size.width/3.5);
 }
 
 // 设置cell边距
 -(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
     //上 左 下 右
-    return UIEdgeInsetsMake(0, 0, 0 ,0);
+    return UIEdgeInsetsMake(0, 10, 0 ,10);
 }
 @end
